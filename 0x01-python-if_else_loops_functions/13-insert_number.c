@@ -42,7 +42,7 @@ listint_t *insert_node(listint_t **head, int number)
 		if (hd == *head)
 			*head = x;
 		else
-			hd_p->next = x
+			hd_p->next = x;
 	}
 
 	return (x);
