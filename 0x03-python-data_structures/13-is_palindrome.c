@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
+
 
 /**
   * is_palindrome - function in C that checks
