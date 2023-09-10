@@ -1,27 +1,25 @@
-#include <stdio.h>
-#include <Python.h>
+#include "Python.h"
+#include <stdlib.h>
 
 /**
- * print_python_list_info - function that returns a
- * tuple with the length of a string and its first character.
- * @p: PyObject
- * Return: no return
+ * print_python_list_info - function that prints some basic info
+ * about Python lists.
+ * @p: in
+ * Return: Nothing.
  */
 void print_python_list_info(PyObject *p)
 {
-	long int s, i;
-	PyListObject *lst;
-	PyObject *t;
+	PyListObject *list = NULL;
+	size_t l = 0, i = 0;
+	const char *type = NULL;
 
-	s = Py_SIZE(p);
-	printf("[*] Size of the Python List = %ld\n", s);
-
-	lst = (PyListObject *)p;
-	printf("[*] Allocated = %ld\n", lst->allocated);
-
-	for (i = 0; i < s; i++)
+	l = PyList_Size(p);
+	list = (PyListObject *)p;
+	printf("[*] Size of the Python List = %ld\n", l);
+	printf("[*] Allocated = %ld\n", (signed long)(list->allocated));
+	for  (; i < l; i++)
 	{
-		t = PyList_GetItem(p, i);
-		printf("Element %ld: %s\n", i, Py_TYPE(t)->tp_name);
+		type = Py_TYPE(list->ob_item[i])->tp_name;
+		printf("Element %ld: %s\n", i, type);
 	}
 }
