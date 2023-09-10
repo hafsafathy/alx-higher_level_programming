@@ -2,7 +2,7 @@
 def multiple_returns(sentence):
     l = len(sentence)
     if l == 0:
-        char = None
+        ntup = (l, None)
     else:
-        char = sentence[0]
-    return ((l, char))
+        ntup = (l, sentence[0])
+    return (ntup)
