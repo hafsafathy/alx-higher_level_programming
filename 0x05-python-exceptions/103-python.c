@@ -96,11 +96,11 @@ void print_python_list(PyObject *p)
 	lst = (PyListObject *)p;
 
 	printf("[*] Size of the Python List = %ld\n", s);
-	printf("[*] Allocated = %ld\n", list->allocated);
+	printf("[*] Allocated = %ld\n", lst->allocated);
 
 	for (i = 0; i < s; i++)
 	{
-		ob = list->ob_item[i];
+		ob = lst->ob_item[i];
 		printf("Element %ld: %s\n", i, ((ob)->ob_type)->tp_name);
 
 		if (PyBytes_Check(ob))
