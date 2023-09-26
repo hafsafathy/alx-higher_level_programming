@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
+"""Empty class """
+
+
 class Square:
+"""Empty class Square that defines a square"""
     pass
