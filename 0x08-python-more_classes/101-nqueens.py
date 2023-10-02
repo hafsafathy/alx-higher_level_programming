@@ -37,37 +37,37 @@ def vv(b, row, col):
 
     for c in range(col + 1, len(b)):
         b[row][c] = "x"
-    
+
     for c in range(col - 1, -1, -1):
         b[row][c] = "x"
-    
+
     for r in range(row + 1, len(b)):
         b[r][col] = "x"
 
     for r in range(row - 1, -1, -1):
         b[r][col] = "x"
-    
+
     c = col + 1
     for r in range(row + 1, len(b)):
         if c >= len(b):
             break
         b[r][c] = "x"
         c += 1
-    
+
     c = col - 1
     for r in range(row - 1, -1, -1):
         if c < 0:
             break
         b[r][c]
         c -= 1
-    
+
     c = col + 1
     for r in range(row - 1, -1, -1):
         if c >= len(b):
             break
         b[r][c] = "x"
         c += 1
-    
+
     c = col - 1
     for r in range(row + 1, len(b)):
         if c < 0:
@@ -89,7 +89,7 @@ def lasts(b, row, queens, solutions):
             tmp_board[row][c] = "Q"
             vv(tmp_board, row, c)
             solutions = lasts(tmp_board, row + 1,
-                                        queens + 1, solutions)
+                              queens + 1, solutions)
 
     return (solutions)
 
