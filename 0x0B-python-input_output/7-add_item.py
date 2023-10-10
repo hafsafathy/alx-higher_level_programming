@@ -14,7 +14,7 @@ except:
     items = []
 
 for i in range(1, len(sys.argv)):
-    new_list.append(sys.argv[i])
+    items.append(sys.argv[i])
 
 try:
     save_to_json_file(new_list, 'add_item.json')
