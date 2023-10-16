@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """base model class"""
+
+
 class Base:
     """
     Class Base
