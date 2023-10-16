@@ -67,4 +67,3 @@ class Square(Rectangle):
                     self.x = v
                 elif k == "y":
                     self.y = v
-
