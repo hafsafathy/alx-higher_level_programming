@@ -144,4 +144,3 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
-
