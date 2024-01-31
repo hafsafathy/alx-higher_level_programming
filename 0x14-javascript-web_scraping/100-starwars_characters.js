@@ -10,7 +10,7 @@ requs.get(url + id, function (error, res, body) {
   const data = JSON.parse(body);
   const ded = data.characters;
   for (const i of ded) {
-    req.get(i, function (error, res, body1) {
+    requs.get(i, function (error, res, body1) {
       if (error) {
         console.log(error);
       }
